@@ -3,7 +3,6 @@ from PageObjects.RadioPageObject import RadioPageObject
 import allure
 
 class TestRadio(BaseClass):
-    
     @allure.title("Clicking Radio Button")
     @allure.description("Clicking and verifying the raio button is clicked")
     @allure.severity(allure.severity_level.CRITICAL)

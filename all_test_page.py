@@ -129,7 +129,7 @@ def test_handle_iframes(setup):
     driver = setup
     id_iframe = "courses-iframe"
     iframe_element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, id_iframe)))
-    driver.execute_script("arguments[0].scrollIntoView(true);", iframe_element)
+    setup.driver.execute_script("arguments[0].scrollIntoView(true);", iframe_element)
     driver.switch_to.frame(iframe_element)
     time.sleep(5)
     driver.find_element(By.CSS_SELECTOR, "div.header-upper").click()
